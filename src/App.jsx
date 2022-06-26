@@ -2,6 +2,7 @@ import React, { Component} from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./pages/Home";
+import Info from "./pages/Info";
 import "./global.css"
 
 /**
@@ -16,9 +17,10 @@ class App extends Component{
           <Header />
           <main>
             <section>
-                <Routes>
-                  <Route path={"/"} element={<Home />} />
-                </Routes>
+              <Routes>
+                <Route path={"/info/"} element={<Info />} />
+                <Route path={"/"} element={<Home />} />
+              </Routes>
             </section>
           </main>
         </BrowserRouter>
