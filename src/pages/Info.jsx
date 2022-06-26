@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom'
 
 export const Info = () => {
   let location = useLocation()
@@ -7,7 +6,8 @@ export const Info = () => {
   // const {image, home_port, mass_kgs, name } = location.state
 
   // API data:
-  const { image, name, language, summary } = location.state
+  const { image, name, language, summary } = location.state;
+
   return (
     <div>
       <div>

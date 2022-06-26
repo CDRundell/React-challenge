@@ -22,7 +22,9 @@ module.exports = {
       "comma-dangle": "off",
       "quotes": "off",
       "arrow-body-style": 0,
-      "space-before-function-paren": 0
+      "space-before-function-paren": 0,
+      "react/prefer-stateless-function": 0,
+      "react/function-component-definition": 0
     },
     "ignorePatterns": ["webpack.config.js", ".eslintrc.js"]
 }

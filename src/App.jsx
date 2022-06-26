@@ -9,9 +9,8 @@ import "./global.css"
  */
 
 class App extends Component{
-
-  render(){
-    return(
+  render () {
+    return (
       <>
         <BrowserRouter>
           <Header />
@@ -25,7 +24,6 @@ class App extends Component{
           </main>
         </BrowserRouter>
       </>
-
     );
   }
 }
