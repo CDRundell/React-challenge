@@ -3,12 +3,17 @@ import { Link, useLocation } from 'react-router-dom'
 
 export const Info = () => {
   let location = useLocation()
-  const {image, home_port, mass_kgs, name } = location.state
+  // Dummy data:
+  // const {image, home_port, mass_kgs, name } = location.state
+
+  // API data:
+    const { image, name, language, summary } = location.state
   return (
     <div>
       <div>
         <h1> {name} </h1>
-        <p> Location: {home_port}</p>
+        <p> Language: {language}</p>
+        <span dangerouslySetInnerHTML={{ __html: summary }} style={{textAlign: "justify"}}  />
       </div>
       <Link to="/">LINK BACK HOME</Link>
     </div>

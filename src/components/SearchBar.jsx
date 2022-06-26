@@ -24,9 +24,12 @@ class SearchBar extends Component {
 
   render () {
     return (
-      <div style={{display:"flex", justifyContent: "center"}}>
+      <div style={{display:"flex", justifyContent: "center", margin:"8px"}}>
         <p>Please enter a TV show to search for:</p>
-        <input type="text" style={{ width: "30%" }} onChange={this.handleUpdate} onKeyDown={this.handleKeyDown} />
+        <input type="text" style={{ width: "30%", marginLeft: "8px"  }}
+              onChange={this.handleUpdate}
+              onKeyDown={this.handleKeyDown}
+              />
       </div>
     );
   }

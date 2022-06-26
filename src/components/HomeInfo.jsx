@@ -17,7 +17,7 @@ class HomeInfo extends Component {
             if (cardInfo.image) {
               url = cardInfo.image.medium
             }
-            return <Link to="info/" underline="none" state={info.show}>
+            return <Link to="info/" underline="none" state={info.show} key={cardInfo.id}>
                     <Card name={cardInfo.name} image={url} key={cardInfo.id}/>
                    </Link>
           })}
