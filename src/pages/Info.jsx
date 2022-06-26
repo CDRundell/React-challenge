@@ -1,11 +1,17 @@
 import React from 'react';
+import { Link, useLocation } from 'react-router-dom'
 
 export const Info = () => {
-  console.log("Hello world")
+  let location = useLocation()
+  const {image, home_port, mass_kgs, name } = location.state
   return (
-  <h1>
-    HELLO WORLD
-  </h1>
+    <div>
+      <div>
+        <h1> {name} </h1>
+        <p> Location: {home_port}</p>
+      </div>
+      <Link to="/" >LINK BACK HOME</Link>
+    </div>
   )
 }
 

@@ -4,12 +4,14 @@ import dummyData from "../dummyData.json"; // To be replaced with your api respo
 import { Link } from 'react-router-dom';
 
 export const Home = () => {
-
   return (
     <>
       <h1>Space X Ships</h1>
       <div className="App" style={{display: "grid", gridTemplateColumns: "1fr 1fr 1fr", rowGap: "10px", columnGap: "20px"}}>
-          <Link to="info/" underline="none"><Card image={dummyData.image} name={dummyData.name} home_port={dummyData.home_port} roles={dummyData.roles} /></Link>
+        { dummyData.map(dummyDatum => {
+          return <Link to="info/" underline="none" state={dummyDatum}><Card image={dummyDatum.image} name={dummyDatum.name} home_port={dummyDatum.home_port} roles={dummyDatum.roles} /></Link>
+        })
+        }
       </div>
     </>
   );
