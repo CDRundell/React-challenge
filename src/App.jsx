@@ -1,14 +1,14 @@
-import React, { Component} from "react";
+import React, { Component } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import Info from "./pages/Info";
-import "./global.css"
+import "./global.css";
 /**
  * The starting page for your App
  */
 
-class App extends Component{
+class App extends Component {
   render () {
     return (
       <>

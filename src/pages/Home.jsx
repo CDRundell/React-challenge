@@ -27,10 +27,9 @@ class Home extends Component {
 
   render () {
     const { shows } = this.state;
-    const { search } = this.search;
     return (
       <>
-        <SearchBar searchFunction={search} />
+        <SearchBar searchFunction={this.search} />
         <HomeInfo information={shows} />
       </>
     );
