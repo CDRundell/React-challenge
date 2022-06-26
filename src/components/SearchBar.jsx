@@ -1,15 +1,33 @@
 import React, { Component }  from 'react'
 
 class SearchBar extends Component {
+
+  constructor (props) {
+    super(props)
+
+    this.state = {
+      query: ""
+    }
+  }
+
   handleUpdate = (event) => {
-    this.props.searchFunction(event.target.value)
+    this.setState({
+      query: event.target.value
+    })
+  }
+
+  handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      this.props.searchFunction(event.target.value)
+    }
   }
 
   render () {
     return (
-      <input type="text" className="form-control form-search"
-        onChange={this.handleUpdate}
-      />
+      <div style={{display:"flex", justifyContent: "center"}}>
+        <p>Please enter a TV show to search for:</p>
+        <input type="text" style={{ width: "30%" }} onChange={this.handleUpdate} onKeyDown={this.handleKeyDown} />
+      </div>
     );
   }
 }

@@ -17,9 +17,6 @@ const Card = (props) => {
     <div style={{display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: "15px", color: "#333", border: "solid 1px #333", borderRadius: "5px"}}>
       <div style={{width: "90%", height: "400px", backgroundImage: `url(${image})`, backgroundSize: "cover", backgroundPosition: "center"}}></div>
         <h1>{name}</h1>
-      {/* <ul>
-        {roles.map((role) => <li key={role}>{role}</li>)}
-      </ul> */}
     </div>
   )
 }
