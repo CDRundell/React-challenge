@@ -10,7 +10,7 @@ export const Info = () => {
         <h1> {name} </h1>
         <p> Location: {home_port}</p>
       </div>
-      <Link to="/" >LINK BACK HOME</Link>
+      <Link to="/">LINK BACK HOME</Link>
     </div>
   )
 }
