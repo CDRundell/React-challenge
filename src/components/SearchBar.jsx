@@ -1,14 +1,6 @@
 import React, { Component } from 'react';
 
 class SearchBar extends Component {
-  constructor (props) {
-    super(props);
-
-    this.state = {
-      query: ""
-    };
-  }
-
   handleUpdate = (event) => {
     this.setState({
       query: event.target.value

@@ -19,7 +19,7 @@ class HomeInfo extends Component {
         >
           {information.map((info) => {
             const cardInfo = { ...info.show };
-            let url = "https://images.unsplash.com/photo-1560109947-543149eceb16?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+            let url = "https://images.unsplash.com/photo-1560109947-543149eceb16?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80";
             if (cardInfo.image) {
               url = cardInfo.image.medium;
             }
