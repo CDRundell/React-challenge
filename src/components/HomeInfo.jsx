@@ -19,13 +19,14 @@ class HomeInfo extends Component {
         >
           {information.map((info) => {
             const cardInfo = { ...info.show };
-            let url = "https://images.unsplash.com/photo-1560109947-543149eceb16?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80";
-            if (cardInfo.image) {
-              url = cardInfo.image.medium;
-            }
+            const url = "https://images.unsplash.com/photo-1560109947-543149eceb16?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80";
             return (
               <Link to="info/" underline="none" state={info.show} key={cardInfo.id}>
-                <Card name={cardInfo.name} image={url} key={cardInfo.id} />
+                <Card
+                  name={cardInfo.name}
+                  image={cardInfo.image ? cardInfo.image.medium : url}
+                  key={cardInfo.id}
+                />
               </Link>
             );
           })}
