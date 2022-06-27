@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Button } from 'antd';
 
 class SearchBar extends Component {
   handleUpdate = (event) => {
@@ -9,8 +10,15 @@ class SearchBar extends Component {
 
   handleKeyDown = (event) => {
     if (event.key === "Enter") {
-      this.props.searchFunction(event.target.value);
+      const { searchFunction } = this.props;
+      searchFunction(event.target.value);
     }
+  };
+
+  handleSubmitButton = () => {
+    const { query } = this.state;
+    const { searchFunction } = this.props;
+    searchFunction(query);
   };
 
   render () {
@@ -23,6 +31,7 @@ class SearchBar extends Component {
           onChange={this.handleUpdate}
           onKeyDown={this.handleKeyDown}
         />
+        <Button type="primary" onClick={this.handleSubmitButton} style={{ marginLeft: "4px" }}> Submit </Button>
       </div>
     );
   }
