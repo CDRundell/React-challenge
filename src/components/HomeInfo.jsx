@@ -21,7 +21,7 @@ class HomeInfo extends Component {
             const cardInfo = { ...info.show };
             const url = "https://images.unsplash.com/photo-1560109947-543149eceb16?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80";
             return (
-              <Link to="info/" underline="none" state={info.show} key={cardInfo.id}>
+              <Link to={`info/${cardInfo.id}`} underline="none" activeClassName="current" state={info.show} key={cardInfo.id}>
                 <Card
                   name={cardInfo.name}
                   image={cardInfo.image ? cardInfo.image.medium : url}
